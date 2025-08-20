@@ -4,75 +4,220 @@
 <meta charset="UTF-8">
 <title>Rozpis FC Bílé Podolí</title>
 <style>
-  body { font-family: Arial, sans-serif; margin: 20px; }
-  table { width: 100%; border-collapse: collapse; }
-  th, td { border: 1px solid #333; padding: 8px; text-align: center; }
-  th { background-color: #444; color: white; }
-  .domaci { background-color: #c6f6c6; } /* zelená */
-  .venku { background-color: #c6d8f6; }   /* modrá */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #fff;
+    color: #222;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #999;
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+    font-size: 18px;
+  }
+  .match {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  .cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .date { font-weight: bold; }
+  .day { font-style: italic; color: #555; }
+  .time { color: #333; }
 </style>
 </head>
 <body>
 
-<h2>Rozpis FC Bílé Podolí</h2>
+<h2>Rozpis utkání FC Bílé Podolí</h2>
+
 <table>
   <tr>
     <th>A mužstvo</th>
     <th>B mužstvo</th>
   </tr>
   <tr>
-    <td class="domaci">16.08. 17:00, Suchdol, Domácí</td>
+    <td class="cell">
+      <div class="date">16.08.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">17:00</div>
+      <div class="match">FC Bílé Podolí – Suchdol</div>
+    </td>
     <td></td>
   </tr>
   <tr>
-    <td class="venku">23.08. 17:00, Ostrá, Venkovní</td>
+    <td class="cell">
+      <div class="date">23.08.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">17:00</div>
+      <div class="match">Ostrá – FC Bílé Podolí</div>
+    </td>
     <td></td>
   </tr>
   <tr>
-    <td class="domaci">30.08. 17:00, Český Brod B, Domácí</td>
-    <td class="venku">30.08. 17:00, Hostovlice, Venkovní</td>
+    <td class="cell">
+      <div class="date">30.08.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">17:00</div>
+      <div class="match">FC Bílé Podolí – Český Brod B</div>
+    </td>
+    <td class="cell">
+      <div class="date">30.08.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">17:00</div>
+      <div class="match">Hostovlice – FC Bílé Podolí B</div>
+    </td>
   </tr>
   <tr>
-    <td class="venku">07.09. 17:00, Velim B, Venkovní</td>
-    <td class="domaci">06.09. 10:15, Zbýšov, Domácí</td>
+    <td class="cell">
+      <div class="date">07.09.2025</div>
+      <div class="day">Neděle</div>
+      <div class="time">17:00</div>
+      <div class="match">Velim B – FC Bílé Podolí</div>
+    </td>
+    <td class="cell">
+      <div class="date">06.09.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">10:15</div>
+      <div class="match">FC Bílé Podolí B – Zbýšov</div>
+    </td>
   </tr>
   <tr>
-    <td class="domaci">13.09. 17:00, Pečky, Domácí</td>
-    <td class="venku">14.09. 16:00, Žlebské Chválovice, Venkovní</td>
+    <td class="cell">
+      <div class="date">13.09.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">17:00</div>
+      <div class="match">FC Bílé Podolí – Pečky</div>
+    </td>
+    <td class="cell">
+      <div class="date">14.09.2025</div>
+      <div class="day">Neděle</div>
+      <div class="time">16:00</div>
+      <div class="match">Žlebské Chválovice – FC Bílé Podolí B</div>
+    </td>
   </tr>
   <tr>
-    <td class="venku">21.09. 16:30, Kácov, Venkovní</td>
-    <td class="domaci">20.09. 16:30, Okřesaneč, Domácí</td>
+    <td class="cell">
+      <div class="date">21.09.2025</div>
+      <div class="day">Neděle</div>
+      <div class="time">16:30</div>
+      <div class="match">Kácov – FC Bílé Podolí</div>
+    </td>
+    <td class="cell">
+      <div class="date">20.09.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">16:30</div>
+      <div class="match">FC Bílé Podolí B – Okřesaneč</div>
+    </td>
   </tr>
   <tr>
-    <td class="domaci">27.09. 16:30, Zásmuky, Domácí</td>
-    <td class="venku">28.09. 16:30, Močovice B, Venkovní</td>
+    <td class="cell">
+      <div class="date">27.09.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">16:30</div>
+      <div class="match">FC Bílé Podolí – Zásmuky</div>
+    </td>
+    <td class="cell">
+      <div class="date">28.09.2025</div>
+      <div class="day">Neděle</div>
+      <div class="time">16:30</div>
+      <div class="match">Močovice B – FC Bílé Podolí B</div>
+    </td>
   </tr>
   <tr>
-    <td class="venku">04.10., Paběnice, Venkovní</td>
-    <td class="domaci">05.10. 16:00, Červené Janovice, Domácí</td>
+    <td class="cell">
+      <div class="date">04.10.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">–</div>
+      <div class="match">Paběnice – FC Bílé Podolí</div>
+    </td>
+    <td class="cell">
+      <div class="date">05.10.2025</div>
+      <div class="day">Neděle</div>
+      <div class="time">16:00</div>
+      <div class="match">FC Bílé Podolí B – Červené Janovice</div>
+    </td>
   </tr>
   <tr>
-    <td class="domaci">11.10. 16:00, Městec Králové, Domácí</td>
-    <td class="venku">11.10. 13:00, Štrampouch, Venkovní</td>
+    <td class="cell">
+      <div class="date">11.10.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">16:00</div>
+      <div class="match">FC Bílé Podolí – Městec Králové</div>
+    </td>
+    <td class="cell">
+      <div class="date">11.10.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">13:00</div>
+      <div class="match">Štrampouch – FC Bílé Podolí B</div>
+    </td>
   </tr>
   <tr>
-    <td class="venku">18.10. 15:30, Jevany, Venkovní</td>
-    <td class="domaci">19.10. 15:30, Paběnice B, Domácí</td>
+    <td class="cell">
+      <div class="date">18.10.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">15:30</div>
+      <div class="match">Jevany – FC Bílé Podolí</div>
+    </td>
+    <td class="cell">
+      <div class="date">19.10.2025</div>
+      <div class="day">Neděle</div>
+      <div class="time">15:30</div>
+      <div class="match">FC Bílé Podolí B – Paběnice B</div>
+    </td>
   </tr>
   <tr>
-    <td class="domaci">25.10. 14:30, Semice, Domácí</td>
-    <td class="venku">26.10. 14:30, Vrdy C, Venkovní</td>
+    <td class="cell">
+      <div class="date">25.10.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">14:30</div>
+      <div class="match">FC Bílé Podolí – Semice</div>
+    </td>
+    <td class="cell">
+      <div class="date">26.10.2025</div>
+      <div class="day">Neděle</div>
+      <div class="time">14:30</div>
+      <div class="match">Vrdy C – FC Bílé Podolí B</div>
+    </td>
   </tr>
   <tr>
-    <td class="venku">01.11. 14:00, Rožďalovice, Venkovní</td>
+    <td class="cell">
+      <div class="date">01.11.2025</div>
+      <div class="day">Sobota</div>
+      <div class="time">14:00</div>
+      <div class="match">Rožďalovice – FC Bílé Podolí</div>
+    </td>
     <td></td>
   </tr>
   <tr>
-    <td class="venku">09.11. 14:00, Pátek, Venkovní</td>
+    <td class="cell">
+      <div class="date">09.11.2025</div>
+      <div class="day">Neděle</div>
+      <div class="time">14:00</div>
+      <div class="match">Pátek – FC Bílé Podolí</div>
+    </td>
     <td></td>
   </tr>
 </table>
+
+</body>
+</html>
+
 
 </body>
 </html>
