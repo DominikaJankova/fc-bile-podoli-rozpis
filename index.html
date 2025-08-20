@@ -17,14 +17,12 @@
     letter-spacing: 1px;
   }
   .tables {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* přesně dva sloupce */
     gap: 40px;
-    flex-wrap: wrap;
   }
   table {
     width: 100%;
-    max-width: 500px;
     border-collapse: collapse;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     border-radius: 6px;
@@ -35,6 +33,7 @@
     padding: 12px;
     font-size: 18px;
     border-bottom: 2px solid #ddd;
+    text-align: center;
   }
   td {
     padding: 10px;
@@ -89,7 +88,6 @@
 
 </body>
 </html>
-
 
 
 </body>
