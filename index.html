@@ -5,64 +5,79 @@
 <title>Rozpis FC Bílé Podolí</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
-    margin: 30px;
-    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f4f6f8;
     color: #222;
   }
+
   h1 {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 28px;
+    font-size: 30px;
     letter-spacing: 1px;
+    margin-bottom: 40px;
+    color: #0055a5;
   }
-  .logo {
-    display: block;
-    margin: 0 auto 20px auto;
-    max-width: 200px;
-    height: auto;
-  }
+
   .tables {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
+
   table {
     width: 100%;
-    max-width: 500px;
     border-collapse: collapse;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    border-radius: 6px;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #fff;
   }
+
+  table:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  }
+
   th {
-    background-color: #f8f8f8;
-    padding: 12px;
-    font-size: 18px;
-    border-bottom: 2px solid #ddd;
-  }
-  td {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+    background-color: #0055a5;
+    color: #fff;
+    padding: 14px;
+    font-size: 20px;
     text-align: center;
   }
-  td:last-child {
-    border-bottom: none;
+
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    transition: background-color 0.2s;
   }
-  strong {
+
+  td:hover {
+    background-color: #e6f0fa;
+  }
+
+  td strong {
     font-weight: bold;
+  }
+
+  /* Responzivní pro mobil */
+  @media (max-width: 700px) {
+    .tables {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 </style>
 </head>
 <body>
 
-<img src="530240364_1280411496880874_6943408668501070376_n.jpg" alt="FC Bílé Podolí logo" class="logo">
-
 <h1>Rozpis utkání FC Bílé Podolí</h1>
 
 <div class="tables">
-  <!-- A mužstvo vlevo -->
+  <!-- A mužstvo -->
   <table>
     <tr><th>A mužstvo</th></tr>
     <tr><td>16.08.2025 17:00<br><strong>FC Bílé Podolí</strong> – Suchdol</td></tr>
@@ -80,7 +95,7 @@
     <tr><td>09.11.2025 14:00<br>Pátek – <strong>FC Bílé Podolí</strong></td></tr>
   </table>
 
-  <!-- B mužstvo vpravo -->
+  <!-- B mužstvo -->
   <table>
     <tr><th>B mužstvo</th></tr>
     <tr><td>30.08.2025 17:00<br>Hostovlice – <strong>FC Bílé Podolí B</strong></td></tr>
