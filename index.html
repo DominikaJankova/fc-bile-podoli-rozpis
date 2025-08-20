@@ -13,24 +13,39 @@
   h1 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 28px;
+    letter-spacing: 1px;
   }
   .tables {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    flex-wrap: wrap;
   }
   table {
     width: 100%;
+    max-width: 500px;
     border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid #999;
-    padding: 8px;
-    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border-radius: 6px;
+    overflow: hidden;
   }
   th {
-    background-color: #f2f2f2;
+    background-color: #f8f8f8;
+    padding: 12px;
     font-size: 18px;
+    border-bottom: 2px solid #ddd;
+  }
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+  td:last-child {
+    border-bottom: none;
+  }
+  strong {
+    font-weight: bold;
   }
 </style>
 </head>
@@ -39,41 +54,42 @@
 <h1>Rozpis utkání FC Bílé Podolí</h1>
 
 <div class="tables">
-  <!-- B mužstvo vlevo -->
-  <table>
-    <tr><th>B mužstvo</th></tr>
-    <tr><td>30.08.2025 17:00<br>Hostovlice – FC Bílé Podolí B</td></tr>
-    <tr><td>06.09.2025 10:15<br>FC Bílé Podolí B – Zbýšov</td></tr>
-    <tr><td>14.09.2025 16:00<br>Žlebské Chválovice – FC Bílé Podolí B</td></tr>
-    <tr><td>20.09.2025 16:30<br>FC Bílé Podolí B – Okřesaneč</td></tr>
-    <tr><td>28.09.2025 16:30<br>Močovice B – FC Bílé Podolí B</td></tr>
-    <tr><td>05.10.2025 16:00<br>FC Bílé Podolí B – Červené Janovice</td></tr>
-    <tr><td>11.10.2025 13:00<br>Štrampouch – FC Bílé Podolí B</td></tr>
-    <tr><td>19.10.2025 15:30<br>FC Bílé Podolí B – Paběnice B</td></tr>
-    <tr><td>26.10.2025 14:30<br>Vrdy C – FC Bílé Podolí B</td></tr>
-  </table>
-
-  <!-- A mužstvo vpravo -->
+  <!-- A mužstvo vlevo -->
   <table>
     <tr><th>A mužstvo</th></tr>
-    <tr><td>16.08.2025 17:00<br>FC Bílé Podolí – Suchdol</td></tr>
-    <tr><td>23.08.2025 17:00<br>Ostrá – FC Bílé Podolí</td></tr>
-    <tr><td>30.08.2025 17:00<br>FC Bílé Podolí – Český Brod B</td></tr>
-    <tr><td>07.09.2025 17:00<br>Velim B – FC Bílé Podolí</td></tr>
-    <tr><td>13.09.2025 17:00<br>FC Bílé Podolí – Pečky</td></tr>
-    <tr><td>21.09.2025 16:30<br>Kácov – FC Bílé Podolí</td></tr>
-    <tr><td>27.09.2025 16:30<br>FC Bílé Podolí – Zásmuky</td></tr>
-    <tr><td>04.10.2025<br>Paběnice – FC Bílé Podolí</td></tr>
-    <tr><td>11.10.2025 16:00<br>FC Bílé Podolí – Městec Králové</td></tr>
-    <tr><td>18.10.2025 15:30<br>Jevany – FC Bílé Podolí</td></tr>
-    <tr><td>25.10.2025 14:30<br>FC Bílé Podolí – Semice</td></tr>
-    <tr><td>01.11.2025 14:00<br>Rožďalovice – FC Bílé Podolí</td></tr>
-    <tr><td>09.11.2025 14:00<br>Pátek – FC Bílé Podolí</td></tr>
+    <tr><td>16.08.2025 17:00<br><strong>FC Bílé Podolí</strong> – Suchdol</td></tr>
+    <tr><td>23.08.2025 17:00<br>Ostrá – <strong>FC Bílé Podolí</strong></td></tr>
+    <tr><td>30.08.2025 17:00<br><strong>FC Bílé Podolí</strong> – Český Brod B</td></tr>
+    <tr><td>07.09.2025 17:00<br>Velim B – <strong>FC Bílé Podolí</strong></td></tr>
+    <tr><td>13.09.2025 17:00<br><strong>FC Bílé Podolí</strong> – Pečky</td></tr>
+    <tr><td>21.09.2025 16:30<br>Kácov – <strong>FC Bílé Podolí</strong></td></tr>
+    <tr><td>27.09.2025 16:30<br><strong>FC Bílé Podolí</strong> – Zásmuky</td></tr>
+    <tr><td>04.10.2025<br>Paběnice – <strong>FC Bílé Podolí</strong></td></tr>
+    <tr><td>11.10.2025 16:00<br><strong>FC Bílé Podolí</strong> – Městec Králové</td></tr>
+    <tr><td>18.10.2025 15:30<br>Jevany – <strong>FC Bílé Podolí</strong></td></tr>
+    <tr><td>25.10.2025 14:30<br><strong>FC Bílé Podolí</strong> – Semice</td></tr>
+    <tr><td>01.11.2025 14:00<br>Rožďalovice – <strong>FC Bílé Podolí</strong></td></tr>
+    <tr><td>09.11.2025 14:00<br>Pátek – <strong>FC Bílé Podolí</strong></td></tr>
+  </table>
+
+  <!-- B mužstvo vpravo -->
+  <table>
+    <tr><th>B mužstvo</th></tr>
+    <tr><td>30.08.2025 17:00<br>Hostovlice – <strong>FC Bílé Podolí B</strong></td></tr>
+    <tr><td>06.09.2025 10:15<br><strong>FC Bílé Podolí B</strong> – Zbýšov</td></tr>
+    <tr><td>14.09.2025 16:00<br>Žlebské Chválovice – <strong>FC Bílé Podolí B</strong></td></tr>
+    <tr><td>20.09.2025 16:30<br><strong>FC Bílé Podolí B</strong> – Okřesaneč</td></tr>
+    <tr><td>28.09.2025 16:30<br>Močovice B – <strong>FC Bílé Podolí B</strong></td></tr>
+    <tr><td>05.10.2025 16:00<br><strong>FC Bílé Podolí B</strong> – Červené Janovice</td></tr>
+    <tr><td>11.10.2025 13:00<br>Štrampouch – <strong>FC Bílé Podolí B</strong></td></tr>
+    <tr><td>19.10.2025 15:30<br><strong>FC Bílé Podolí B</strong> – Paběnice B</td></tr>
+    <tr><td>26.10.2025 14:30<br>Vrdy C – <strong>FC Bílé Podolí B</strong></td></tr>
   </table>
 </div>
 
 </body>
 </html>
+
 
 
 </body>
