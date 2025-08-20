@@ -10,17 +10,20 @@
     background-color: #fff;
     color: #222;
   }
+
   h1 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 28px;
     letter-spacing: 1px;
   }
+
   .tables {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* dva sloupce */
     gap: 40px;
   }
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -28,50 +31,49 @@
     border-radius: 6px;
     overflow: hidden;
   }
+
   th {
-    background-color: #f8f8f8;
+    background-color: #28a745; /* zelená hlavička */
+    color: #fff;
     padding: 12px;
     font-size: 18px;
-    border-bottom: 2px solid #ddd;
     text-align: center;
   }
+
   td {
     padding: 10px;
     border-bottom: 1px solid #eee;
     text-align: center;
-  }
-  td:last-child {
-    border-bottom: none;
-  }
-  strong {
-    font-weight: bold;
-    color: #006400; /* tmavě zelená pro klub */
+    color: #000; /* černý text */
+    cursor: default;
+    position: relative;
   }
 
-  /* tooltipy */
+  td strong {
+    font-weight: bold;
+  }
+
+  /* Tooltip styl */
   .tooltip {
     position: relative;
     display: inline-block;
-    cursor: pointer;
-    color: #006400;
   }
 
   .tooltip .tooltiptext {
     visibility: hidden;
-    width: 130px;
-    background-color: #006400;
+    width: 140px;
+    background-color: #28a745;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px;
+    padding: 5px 0;
     position: absolute;
     z-index: 1;
-    bottom: 125%; 
+    bottom: 125%; /* nad textem */
     left: 50%;
-    transform: translateX(-50%);
+    margin-left: -70px;
     opacity: 0;
     transition: opacity 0.3s;
-    font-size: 14px;
   }
 
   .tooltip:hover .tooltiptext {
@@ -88,81 +90,53 @@
   <!-- A mužstvo vlevo -->
   <table>
     <tr><th>A mužstvo</th></tr>
-    <tr><td>16.08.2025 17:00<br><strong>FC Bílé Podolí</strong> – Suchdol</td></tr>
-    <tr><td>23.08.2025 17:00<br>
-      <span class="tooltip">Ostrá
-        <span class="tooltiptext">Vzdálenost: 73 km</span>
-      </span> – <strong>FC Bílé Podolí</strong>
-    </td></tr>
-    <tr><td>30.08.2025 17:00<br><strong>FC Bílé Podolí</strong> – Český Brod B</td></tr>
-    <tr><td>07.09.2025 17:00<br>
-      <span class="tooltip">Velim B
-        <span class="tooltiptext">Vzdálenost: 43,3 km</span>
-      </span> – <strong>FC Bílé Podolí</strong>
-    </td></tr>
-    <tr><td>13.09.2025 17:00<br><strong>FC Bílé Podolí</strong> – Pečky</td></tr>
-    <tr><td>21.09.2025 16:30<br>
-      <span class="tooltip">Kácov
-        <span class="tooltiptext">Vzdálenost: 51,5 km</span>
-      </span> – <strong>FC Bílé Podolí</strong>
-    </td></tr>
-    <tr><td>27.09.2025 16:30<br><strong>FC Bílé Podolí</strong> – Zásmuky</td></tr>
-    <tr><td>04.10.2025<br>
-      <span class="tooltip">Paběnice
-        <span class="tooltiptext">Vzdálenost: 23,1 km</span>
-      </span> – <strong>FC Bílé Podolí</strong>
-    </td></tr>
-    <tr><td>11.10.2025 16:00<br><strong>FC Bílé Podolí</strong> – Městec Králové</td></tr>
-    <tr><td>18.10.2025 15:30<br>
-      <span class="tooltip">Jevany
-        <span class="tooltiptext">Vzdálenost: 71,3 km</span>
-      </span> – <strong>FC Bílé Podolí</strong>
-    </td></tr>
-    <tr><td>25.10.2025 14:30<br><strong>FC Bílé Podolí</strong> – Semice</td></tr>
-    <tr><td>01.11.2025 14:00<br>
-      <span class="tooltip">Rožďalovice
-        <span class="tooltiptext">Vzdálenost: 64,1 km</span>
-      </span> – <strong>FC Bílé Podolí</strong>
-    </td></tr>
-    <tr><td>09.11.2025 14:00<br>
-      <span class="tooltip">Pátek
-        <span class="tooltiptext">Vzdálenost: 50,6 km</span>
-      </span> – <strong>FC Bílé Podolí</strong>
-    </td></tr>
+    <tr><td><span class="tooltip">16.08.2025 17:00<br><strong>FC Bílé Podolí</strong> – Suchdol</span></td></tr>
+    <tr><td><span class="tooltip" title="73 km">23.08.2025 17:00<br>Ostrá – <strong>FC Bílé Podolí</strong>
+      <span class="tooltiptext">73 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip">30.08.2025 17:00<br><strong>FC Bílé Podolí</strong> – Český Brod B</span></td></tr>
+    <tr><td><span class="tooltip" title="43,3 km">07.09.2025 17:00<br>Velim B – <strong>FC Bílé Podolí</strong>
+      <span class="tooltiptext">43,3 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip" title="51,5 km">21.09.2025 16:30<br>Kácov – <strong>FC Bílé Podolí</strong>
+      <span class="tooltiptext">51,5 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip" title="23,1 km">04.10.2025<br>Paběnice – <strong>FC Bílé Podolí</strong>
+      <span class="tooltiptext">23,1 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip" title="71,3 km">18.10.2025 15:30<br>Jevany – <strong>FC Bílé Podolí</strong>
+      <span class="tooltiptext">71,3 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip" title="64,1 km">01.11.2025 14:00<br>Rožďalovice – <strong>FC Bílé Podolí</strong>
+      <span class="tooltiptext">64,1 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip" title="50,6 km">09.11.2025 14:00<br>Pátek – <strong>FC Bílé Podolí</strong>
+      <span class="tooltiptext">50,6 km</span>
+    </span></td></tr>
   </table>
 
   <!-- B mužstvo vpravo -->
   <table>
     <tr><th>B mužstvo</th></tr>
-    <tr><td>30.08.2025 17:00<br>
-      <span class="tooltip">Hostovlice
-        <span class="tooltiptext">Vzdálenost: 14,4 km</span>
-      </span> – <strong>FC Bílé Podolí B</strong>
-    </td></tr>
-    <tr><td>06.09.2025 10:15<br><strong>FC Bílé Podolí B</strong> – Zbýšov</td></tr>
-    <tr><td>14.09.2025 16:00<br>
-      <span class="tooltip">Žlebské Chválovice
-        <span class="tooltiptext">Vzdálenost: 13 km</span>
-      </span> – <strong>FC Bílé Podolí B</strong>
-    </td></tr>
-    <tr><td>20.09.2025 16:30<br><strong>FC Bílé Podolí B</strong> – Okřesaneč</td></tr>
-    <tr><td>28.09.2025 16:30<br>
-      <span class="tooltip">Močovice B
-        <span class="tooltiptext">Vzdálenost: 13,7 km</span>
-      </span> – <strong>FC Bílé Podolí B</strong>
-    </td></tr>
-    <tr><td>05.10.2025 16:00<br><strong>FC Bílé Podolí B</strong> – Červené Janovice</td></tr>
-    <tr><td>11.10.2025 13:00<br>
-      <span class="tooltip">Štrampouch
-        <span class="tooltiptext">Vzdálenost: 17,6 km</span>
-      </span> – <strong>FC Bílé Podolí B</strong>
-    </td></tr>
-    <tr><td>19.10.2025 15:30<br><strong>FC Bílé Podolí B</strong> – Paběnice B</td></tr>
-    <tr><td>26.10.2025 14:30<br>
-      <span class="tooltip">Vrdy C
-        <span class="tooltiptext">Vzdálenost: 5,1 km</span>
-      </span> – <strong>FC Bílé Podolí B</strong>
-    </td></tr>
+    <tr><td><span class="tooltip">30.08.2025 17:00<br>Hostovlice – <strong>FC Bílé Podolí B</strong></span></td></tr>
+    <tr><td><span class="tooltip" title="14,4 km">06.09.2025 10:15<br><strong>FC Bílé Podolí B</strong> – Zbýšov
+      <span class="tooltiptext">14,4 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip" title="13 km">14.09.2025 16:00<br>Žlebské Chválovice – <strong>FC Bílé Podolí B</strong>
+      <span class="tooltiptext">13 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip">20.09.2025 16:30<br><strong>FC Bílé Podolí B</strong> – Okřesaneč</span></td></tr>
+    <tr><td><span class="tooltip" title="13,7 km">28.09.2025 16:30<br>Močovice B – <strong>FC Bílé Podolí B</strong>
+      <span class="tooltiptext">13,7 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip">05.10.2025 16:00<br><strong>FC Bílé Podolí B</strong> – Červené Janovice</span></td></tr>
+    <tr><td><span class="tooltip" title="17,6 km">11.10.2025 13:00<br>Štrampouch – <strong>FC Bílé Podolí B</strong>
+      <span class="tooltiptext">17,6 km</span>
+    </span></td></tr>
+    <tr><td><span class="tooltip">19.10.2025 15:30<br><strong>FC Bílé Podolí B</strong> – Paběnice B</span></td></tr>
+    <tr><td><span class="tooltip" title="5,1 km">26.10.2025 14:30<br>Vrdy C – <strong>FC Bílé Podolí B</strong>
+      <span class="tooltiptext">5,1 km</span>
+    </span></td></tr>
   </table>
 </div>
 
