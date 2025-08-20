@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <title>Rozpis FC Bílé Podolí</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 { color: #006400; }
-    table {
-      margin: 0 auto;
-      border-collapse: collapse;
-      width: 80%;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-    }
-    th {
-      background-color: #e0ffe0;
-    }
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Rozpis FC Bílé Podolí</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #333; padding: 8px; text-align: center; }
+  th { background-color: #444; color: white; }
+  .domaci { background-color: #c6f6c6; } /* zelená */
+  .venku { background-color: #c6d8f6; }   /* modrá */
+</style>
 </head>
 <body>
-  <h1>Rozpis utkání FC Bílé Podolí</h1>
-  <table>
-    <tr>
-      <th>Datum</th>
-      <th>Čas</th>
-      <th>Soupeř</th>
-      <th>Místo</th>
-    </tr>
-    <tr>
-      <td>25.8.2025</td>
-      <td>17:00</td>
-      <td>FC Modré Pole</td>
-      <td>Domácí</td>
-    </tr>
-    <tr>
-      <td>30.8.2025</td>
-      <td>15:00</td>
-      <td>FC Zelené Město</td>
-      <td>Venku</td>
-    </tr>
-  </table>
+
+<h2>Rozpis FC Bílé Podolí</h2>
+<table>
+  <tr>
+    <th>A mužstvo</th>
+    <th>B mužstvo</th>
+  </tr>
+  <tr>
+    <td class="domaci">16.08. 17:00, Suchdol, Domácí</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="venku">23.08. 17:00, Ostrá, Venkovní</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="domaci">30.08. 17:00, Český Brod B, Domácí</td>
+    <td class="venku">30.08. 17:00, Hostovlice, Venkovní</td>
+  </tr>
+  <tr>
+    <td class="venku">07.09. 17:00, Velim B, Venkovní</td>
+    <td class="domaci">06.09. 10:15, Zbýšov, Domácí</td>
+  </tr>
+  <tr>
+    <td class="domaci">13.09. 17:00, Pečky, Domácí</td>
+    <td class="venku">14.09. 16:00, Žlebské Chválovice, Venkovní</td>
+  </tr>
+  <tr>
+    <td class="venku">21.09. 16:30, Kácov, Venkovní</td>
+    <td class="domaci">20.09. 16:30, Okřesaneč, Domácí</td>
+  </tr>
+  <tr>
+    <td class="domaci">27.09. 16:30, Zásmuky, Domácí</td>
+    <td class="venku">28.09. 16:30, Močovice B, Venkovní</td>
+  </tr>
+  <tr>
+    <td class="venku">04.10., Paběnice, Venkovní</td>
+    <td class="domaci">05.10. 16:00, Červené Janovice, Domácí</td>
+  </tr>
+  <tr>
+    <td class="domaci">11.10. 16:00, Městec Králové, Domácí</td>
+    <td class="venku">11.10. 13:00, Štrampouch, Venkovní</td>
+  </tr>
+  <tr>
+    <td class="venku">18.10. 15:30, Jevany, Venkovní</td>
+    <td class="domaci">19.10. 15:30, Paběnice B, Domácí</td>
+  </tr>
+  <tr>
+    <td class="domaci">25.10. 14:30, Semice, Domácí</td>
+    <td class="venku">26.10. 14:30, Vrdy C, Venkovní</td>
+  </tr>
+  <tr>
+    <td class="venku">01.11. 14:00, Rožďalovice, Venkovní</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="venku">09.11. 14:00, Pátek, Venkovní</td>
+    <td></td>
+  </tr>
+</table>
+
 </body>
 </html>
